@@ -13,3 +13,14 @@ if (guess == (randomNumber)) {
 } else {
     guessesRemaining--;
 };
+
+/* If the user guesses incorrectly, an alert will display letting them know their answer was either too high or too low. */
+if (guessesRemaining > 1 ) {
+    if (guess < (randomNumber)) {
+        alert('That number is too low. You have ' + guessesRemaining + ' guesses remaining.');
+    } else {
+        alert('That number is too high. You have ' + guessesRemaining + ' guesses remaining');
+    }
+    prompt('Guess a Number between 1 - 50.')
+}
+
