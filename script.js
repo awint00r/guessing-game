@@ -24,3 +24,13 @@ if (guessesRemaining > 1 ) {
     prompt('Guess a Number between 1 - 50.')
 }
 
+/* Replication of code for original guess except adjust verbiage for only 1 guess remaining instead of greater than 1 */
+if (guessesRemaining = 1 ) {
+    if (guess < (randomNumber)) {
+        alert('That number is too low. You have ' + guessesRemaining + ' guess remaining.');
+    } else {
+        alert('That number is too high. You have ' + guessesRemaining + ' guess remaining');
+    }
+    prompt('Guess a Number between 1 - 50.')
+}
+
