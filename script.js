@@ -4,19 +4,22 @@ const randomNumber = Math.floor(Math.random() * 50) + 1;
 /* Start with 3 guesses */
 let guessesRemaining = 3; 
 
+/* Allow the user to enter their name*/
+let userName = prompt('What is your name?')
+
 /* Declares guess as the value entered by the user. */
-let guess = prompt("Guess a Number between 1 - 50.");
+let guess = prompt(" Hi there " + userName + ". Guess a Number between 1 - 50.");
 
 /* If the user guesses the correct number, an alert will display letting them know they got it and what the correct number was; otherwise the guesses remaining will decrease by 1 and the user will be alerted on whether they were too high or too low.. */
 if (guessesRemaining == 3 ) { 
     if (guess < (randomNumber)) {
         guessesRemaining--;
-        alert('That number is too low. You have ' + guessesRemaining + ' guesses remaining.');  
+        alert('That number is too low ' + userName + '. You have ' + guessesRemaining + ' guesses remaining.');  
     } else if (guess == (randomNumber)) {
-        alert('You NAILED it! The correct number was ' + randomNumber + '.')
+        alert('You NAILED it ' + userName + '! The correct number was ' + randomNumber + '.')
     } else {
         guessesRemaining--;
-        alert('That number is too high. You have ' + guessesRemaining + ' guesses remaining');
+        alert('That number is too high ' + userName + '. You have ' + guessesRemaining + ' guesses remaining');
         
     }
 }
@@ -27,12 +30,12 @@ if (guessesRemaining == 2 ) {
     guess = prompt("Guess a Number between 1 - 50."); 
     if (guess < (randomNumber)) {
         guessesRemaining--;   
-        alert('That number is too low. You have ' + guessesRemaining + ' guesses remaining.'); 
+        alert('That number is too low ' + userName + '. You have ' + guessesRemaining + ' guesses remaining.'); 
     } else if (guess == (randomNumber)) {
-        alert('You NAILED it! The correct number was ' + randomNumber + '.')
+        alert('You NAILED it ' + userName + '! The correct number was ' + randomNumber + '.')
     } else {
         guessesRemaining--;
-        alert('That number is too high. You have ' + guessesRemaining + ' guesses remaining');
+        alert('That number is too high ' + userName + '. You have ' + guessesRemaining + ' guesses remaining');
     }
 }
 
@@ -41,8 +44,8 @@ if (guessesRemaining == 2 ) {
 if (guessesRemaining == 1 ) { 
     guess = prompt("Guess a Number between 1 - 50.");
         if (guess == (randomNumber)) {
-            alert('You NAILED it! The correct number was ' + randomNumber + '.')
+            alert('You NAILED it ' + userName + '! The correct number was ' + randomNumber + '.')
         } else if (guess !== (randomNumber)) {
-            alert('Sorry, you did not guess the correct value. The correct number was ' + randomNumber + '. Please refresh the page to play again.');
+            alert('Sorry ' + userName + ', you did not guess the correct value. The correct number was ' + randomNumber + '. Please refresh the page to play again.');
         }
     }
